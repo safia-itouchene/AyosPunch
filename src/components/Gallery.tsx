@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X, Play, Pause, ShoppingBag, Star } from 'lucide-react';
 
 // Import all images
-import img3 from './assets/3.webp';
-import img5 from './assets/5.jpg';
-import img6 from './assets/6.jpg';
-import img7 from './assets/7.jpg';
-import img8 from './assets/8.jpg';
-import img9 from './assets/9.jpg';
-import img10 from './assets/10.jpg';
-import img11 from './assets/11.jpg';
-import img12 from './assets/12.jpg';
-import img13 from './assets/13.webp';
-import img14 from './assets/14.webp';
-import img15 from './assets/15.jpg';
+import img3 from '../assets/3.webp';
+import img5 from '../assets/5.jpg';
+import img6 from '../assets/6.jpg';
+import img7 from '../assets/7.jpg';
+import img8 from '../assets/8.jpg';
+import img9 from '../assets/9.jpg';
+import img10 from '../assets/10.jpg';
+import img11 from '../assets/11.jpg';
+import img12 from '../assets/4.jpg';
+import img13 from '../assets/13.webp';
+import img14 from '../assets/14.webp';
+import img15 from '../assets/15.jpg';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
