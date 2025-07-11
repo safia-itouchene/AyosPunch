@@ -1,101 +1,115 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X, Play, Pause, ShoppingBag, Star } from 'lucide-react';
 
+// Import all images
+import img3 from './assets/3.webp';
+import img5 from './assets/5.jpg';
+import img6 from './assets/6.jpg';
+import img7 from './assets/7.jpg';
+import img8 from './assets/8.jpg';
+import img9 from './assets/9.jpg';
+import img10 from './assets/10.jpg';
+import img11 from './assets/11.jpg';
+import img12 from './assets/12.jpg';
+import img13 from './assets/13.webp';
+import img14 from './assets/14.webp';
+import img15 from './assets/15.jpg';
+
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Gallery items with your local images
+  // Gallery items with imported images
   const galleryImages = [
     // Carousel images (1-5)
     {
-      src: "/assets/14.webp",
+      src: img14,
       alt: "Colorful punch needle wall art",
       price: "2500 DA",
       category: "Wall Art"
     },
     {
-      src: "/assets/9.jpg",
+      src: img9,
       alt: "Handmade textile art",
       price: "3200 DA",
       category: "Textile Art"
     },
     {
-      src: "/assets/3.webp",
+      src: img3,
       alt: "Punch needle flowers",
       price: "1800 DA",
       category: "Flowers"
     },
     {
-      src: "/assets/12.jpg",
+      src: img12,
       alt: "Embroidery hoop art",
       price: "2200 DA",
       category: "Hoop Art"
     },
     {
-      src: "/assets/5.jpg",
+      src: img5,
       alt: "Handcrafted decorations",
       price: "2800 DA",
       category: "Decorations"
     },
     // Grid images (6-15)
     {
-      src: "/assets/6.jpg",
+      src: img6,
       alt: "Punch needle patterns",
       price: "3500 DA",
       category: "Custom Patterns"
     },
     {
-      src: "/assets/7.jpg",
+      src: img7,
       alt: "Custom designs",
       price: "4000 DA",
       category: "Custom Design"
     },
     {
-      src: "/assets/8.jpg",
+      src: img8,
       alt: "Beautiful crafts",
       price: "2600 DA",
       category: "Crafts"
     },
     {
-      src: "/assets/9.jpg",
+      src: img9,
       alt: "Mini punch needle art",
       price: "1500 DA",
       category: "Mini Art"
     },
     {
-      src: "/assets/10.jpg",
+      src: img10,
       alt: "Large wall piece",
       price: "5500 DA",
       category: "Large Pieces"
     },
     {
-      src: "/assets/11.jpg",
+      src: img11,
       alt: "Cute animal design",
       price: "2100 DA",
       category: "Animals"
     },
     {
-      src: "/assets/12.jpg",
+      src: img12,
       alt: "Personalized gift",
       price: "3800 DA",
       category: "Personalized"
     },
     {
-      src: "/assets/13.webp",
+      src: img13,
       alt: "Punch needle wall hanging",
       price: "3000 DA",
       category: "Wall Art"
     },
     {
-      src: "/assets/14.webp",
+      src: img14,
       alt: "Textile decoration",
       price: "2700 DA",
       category: "Decorations"
     },
     {
-      src: "/assets/15.jpg",
+      src: img15,
       alt: "Custom hoop art",
       price: "3300 DA",
       category: "Hoop Art"
@@ -159,6 +173,7 @@ const Gallery = () => {
             <div 
               key={index + 5}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105"
+              onClick={() => openModal(index)}
             >
               <div className="aspect-square  flex items-center justify-center p-2">
                 <img 
